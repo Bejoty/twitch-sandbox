@@ -2,9 +2,10 @@
   "name": "twitch-sandbox",
   "version": "1.0.0",
   "description": "An interactive playground interfacing the Twitch API",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index",
+    "dev": "nodemon index"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,15 @@
   "bugs": {
     "url": "https://github.com/Bejoty/twitch-sandbox/issues"
   },
-  "homepage": "https://github.com/Bejoty/twitch-sandbox#readme"
+  "homepage": "https://github.com/Bejoty/twitch-sandbox#readme",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "pg": "^7.12.0",
+    "superagent": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
 }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head'); %>
+  <body>
+    <%- include('partials/nav'); %>
+    <div class="container">
+      <div class="intro">
+        <h2>Top Games</h2>
+        <p>These are the top games being streamed on Twitch right now! Select a few that you would like to track, and click the button below!</p>
+      </div>
+      <div class="grid-container">
+        <% games.forEach(game => { %>
+        <div id="<%= game.id %>" class="game">
+          <div class="game-box-art">
+            <img src="<%= game.box_art_url.replace(/{width}/, 150).replace(/{height}/, 200) %>" />
+          </div>
+          <div class="game-title"><%= game.name %></div>
+        </div>
+        <% }); %>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <form action="/addgames" method="post">
+          <input id="gamesInput" type="hidden" name="games">
+          <input type="submit" value="Select Games" class="btn-select btn btn-primary">
+        </form>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

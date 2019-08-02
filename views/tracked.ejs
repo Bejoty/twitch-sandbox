@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head'); %>
+  <body>
+    <%- include('partials/nav'); %>
+    <div class="container">
+      <div class="intro">
+        <h2>Tracked Games</h2>
+        <p>You've tracked the following games. Check out who's streaming!</p>
+      </div>
+      <% tracked.forEach(game => { %>
+      <div id="<%= game.game_id %>" class="game-card">
+        <div class="game-box-art">
+          <img src="<%= game.box_art_url.replace(/{width}/, 150).replace(/{height}/, 200) %>" />
+        </div>
+        <div class="game-title">
+          <%= game.name %><a href="#" class="btn btn-delete">X</a>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+
+    <script src="js/streams.js"></script>
+  </body>
+</html>

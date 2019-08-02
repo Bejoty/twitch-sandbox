@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+:root {
+  --primary-color: #229999;
+  --primary-hover-color: #22aaaa;
+  --dark-color: #333333;
+  --light-color: #f4f4f4;
+  --error-color: #cc3344;
+  --error-hover-color: #dd4444;
+  --success-color: #22bb44;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 100px;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.container {
+  max-width: 1100px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+nav {
+  padding: 0.5rem 1rem;
+  background: #f8f8f8;
+}
+
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-title {
+  font-size: 1.25rem;
+  padding: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  padding: 0.5rem 1rem;
+}
+
+nav ul li a:hover {
+  padding: 0.5rem 1rem;
+  background: #ccc;
+}
+
+.intro {
+  margin: 2rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+@media (max-width: 1100px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.game {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-width: 0;
+  padding: 1rem;
+  word-wrap: break-word;
+}
+
+.game:hover {
+  box-shadow: #ccc 0 0 0px 5px;
+}
+
+.game-selected {
+  box-shadow: var(--primary-color) 0 0 0px 5px;
+  background: #ccc;
+}
+
+.game-selected:hover {
+  box-shadow: var(--primary-hover-color) 0 0 0px 5px;
+  background: var(--light-color);
+}
+
+.game-title {
+  font-size: 1.5rem;
+}
+
+.game-box-art {
+  float: right;
+  margin-left: 0.5rem;
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #ccc;
+}
+
+#selectGames {
+  margin: 1rem;
+}
+
+.game-card {
+  overflow: hidden;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  border-bottom: 1px solid gray;
+}
+
+.btn-select {
+  color: #fff;
+  background-color: #228091;
+  border: transparent;
+  border-radius: 0.25rem;
+  margin: 1rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-select:hover {
+  background-color: #0da8c4;
+}
+
+.btn-delete {
+  background: var(--error-color);
+  color: white;
+  margin: 0 1rem;
+  padding: 0.5rem 0.75rem;
+  width: 40px;
+  border-radius: 4px;
+  vertical-align: middle;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.btn-delete:hover {
+  background: var(--error-hover-color);
+}
+
+.streamers {
+  margin-top: 1rem;
+}
+
+.streamer {
+  float: left;
+  background: #737;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  margin: 1rem;
+}
+
+.streamer:hover {
+  background: rgb(190, 64, 190);
+}
